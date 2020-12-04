@@ -3,24 +3,25 @@
   src: url("/css/fonts/OpenSans-Regular.ttf") format("woff"), url("/css/fonts/OpenSans-Bold.ttf") format("woff"); }
 
 @font-face {
-  font-family: 'Asul';
+  font-family: "Asul";
   src: url("/css/fonts/Asul-Regular.ttf"), url("/css/fonts/Asul-Bold.ttf"); }
 
 @font-face {
-  font-family: 'Tilting Gothic';
+  font-family: "Tilting Gothic";
   src: url("/css/fonts/Titling Gothic FB Extended Regular.otf"); }
 
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'Open Sans'; }
+  font-family: "Open Sans"; }
 
 body {
   margin: 0; }
 
 h2 {
-  font-family: 'Tilting Gothic';
+  font-family: "Tilting Gothic";
   color: #8ca48c;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 48px;
   text-transform: uppercase; }
 
@@ -34,6 +35,17 @@ p {
 a {
   text-decoration: none;
   color: #000; }
+
+hr {
+  width: 69%;
+  margin: 0 50px 50px AUTO;
+  /* float: right; */
+  /* HEIGHT: 1PX; */
+  margin-top: 107px 0;
+  padding-top: 46px;
+  border-top: none;
+  border-right: none;
+  border-left: none; }
 
 body {
   color: #000;
@@ -84,7 +96,8 @@ body {
     z-index: 999999999;
     color: #fff; }
     body nav #menu__toggle {
-      opacity: 0; }
+      opacity: 0;
+      position: fixed; }
     body nav #menu__toggle:checked ~ .menu__btn > span {
       transform: rotate(45deg); }
     body nav #menu__toggle:checked ~ .menu__btn > span::before {
@@ -100,7 +113,7 @@ body {
       display: flex;
       align-items: center;
       position: fixed;
-      top: 50px;
+      top: 60px;
       right: 50px;
       width: 26px;
       height: 26px;
@@ -114,13 +127,17 @@ body {
       width: 100%;
       height: 2px;
       background-color: #fff;
-      transition-duration: .55s; }
+      transition-duration: 0.55s; }
     body nav .menu__btn > span::before {
-      content: '';
-      top: -8px; }
+      content: "";
+      top: -8px;
+      width: 80%;
+      background-color: #fff; }
     body nav .menu__btn > span::after {
-      content: '';
-      top: 8px; }
+      content: "";
+      top: 8px;
+      width: 80%;
+      background-color: #fff; }
     body nav .menu__box {
       display: block;
       position: fixed;
@@ -134,25 +151,30 @@ body {
       list-style: none;
       background-color: #8ca48c;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-      transition-duration: .55s; }
+      transition-duration: 0.55s; }
       body nav .menu__box li {
         height: 20px; }
     body nav .menu__item {
       display: block;
       text-align: right;
       color: #fff;
-      font-family: 'Tilting Gothic';
+      font-family: "Tilting Gothic";
       text-transform: uppercase;
       font-size: 16px;
       text-decoration: none;
-      transition-duration: .55s;
+      transition-duration: 0.55s;
       right: 50px;
       margin: 40px 50px; }
       body nav .menu__item.active > span {
         border-bottom: 1px solid #fff;
         padding-bottom: 3px; }
-    body nav .menu__item:hover {
-      background-color: #CFD8DC; }
+      body nav .menu__item span:hover {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 3px; }
+      body nav .menu__item.small {
+        font-size: 14px;
+        font-family: "Asul";
+        margin: 2px 50px; }
   body section {
     width: 100%;
     position: relative; }
@@ -185,7 +207,7 @@ body {
           bottom: 16%;
           right: 5%;
           font-size: 14px;
-          font-family: 'Pacifico', cursive;
+          font-family: "Pacifico", cursive;
           width: 165px; }
     body section.residence {
       min-height: 500px;
@@ -223,7 +245,8 @@ body {
       min-height: 500px; }
       body section.social article {
         padding: 0; }
-      body section.social h2, body section.social p {
+      body section.social h2,
+      body section.social p {
         color: #fff; }
       body section.social p {
         padding: 0;
@@ -236,7 +259,7 @@ body {
         font-size: 19px;
         max-width: 700px; }
       body section article a {
-        font-family: 'Tilting Gothic';
+        font-family: "Tilting Gothic";
         text-transform: uppercase;
         font-size: 16px;
         border-bottom: 1px solid #000;
@@ -248,18 +271,31 @@ body {
   padding: 30px 30px 20px 30px;
   color: #fff;
   background-color: #2f2f2f;
-  border-top: 1px solid #e5e5e5; }
+  border-top: 1px solid #e5e5e5;
+  /* width: 700px; */
+  /* height: 100px; */
+  /* background-color: linen; */
+  background-size: 262px 219px;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(to right, #3d3c3c 1px, transparent 1px);
+  background-position: 40px;
+  font-family: "Asul"; }
   .footer h2 {
-    color: #fff; }
+    font-size: 16px;
+    color: #fff;
+    font-family: "Asul";
+    line-height: normal; }
 
 .footer > * {
   flex: 1 100%; }
 
 .footer__addr {
   margin-right: 1.25em;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  margin-top: -20px; }
 
 .footer__logo {
+  margin: 20px auto 0 auto;
   background-image: url("/css/images/Footer Logo.svg");
   width: 55px;
   height: 98px; }
@@ -296,7 +332,7 @@ body {
   padding-left: 0; }
 
 .footer li {
-  line-height: 2em; }
+  line-height: 1.5em; }
 
 .footer a {
   text-decoration: none; }
@@ -320,10 +356,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   color: #fff; }
+  .legal p {
+    font-size: 14px;
+    padding-top: 30px; }
 
 .legal__links {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 14px; }
+  .legal__links div {
+    padding: 0 3px; }
 
 @media screen and (min-width: 24.375em) {
   .legal .legal__links {
@@ -380,13 +422,38 @@ div {
   color: #8ca48c;
   text-transform: uppercase;
   animation: waviy 2.5s infinite;
-  animation-delay: calc(.1s * var(--i)); }
+  animation-delay: calc(0.1s * var(--i)); }
 
 @keyframes waviy {
-  0%, 40%, 100% {
+  0%,
+  40%,
+  100% {
     transform: translateY(0); }
   20% {
     transform: translateY(-20px); } }
+
+.hero .waviy-body {
+  z-index: 99999;
+  top: 100%;
+  right: 11%;
+  left: auto; }
+  .hero .waviy-body .waviy span {
+    color: #8ca48c; }
+
+.hero .waviy-body:nth-child(1) {
+  top: 95%; }
+
+.hero .waviy-body:nth-child(2) {
+  top: 97%; }
+
+.hero .waviy-body:nth-child(3) {
+  top: 99%; }
+
+.hero .waviy-body:nth-child(4) {
+  top: 101%; }
+
+.hero .waviy-body:nth-child(5) {
+  top: 103%; }
 
 .residence-hero .waviy-body {
   z-index: 99999;
@@ -439,7 +506,10 @@ div {
     padding-left: 5%; }
     body section.playground article aside {
       bottom: 12%;
-      left: 5%; } }
+      left: 5%; }
+  body nav .menu__btn {
+    top: 63px;
+    right: 12px; } }
 
 @media screen and (max-width: 765px) {
   .topnav .linkitem {
@@ -468,7 +538,15 @@ div {
   body section.herald .waviy-body:nth-child(4) {
     top: 1%; }
   body section.herald .waviy-body:nth-child(5) {
-    top: 3%; } }
+    top: 3%; }
+  body nav .menu__box {
+    width: 33%; }
+  body nav .menu__item {
+    font-size: 10px;
+    margin: 14px 10px;
+    text-align: left; }
+    body nav .menu__item.small {
+      margin: 14px 10px; } }
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -488,11 +566,14 @@ div {
     -ms-transition: color 0.5s ease-in-out;
     -o-transition: color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out; }
+    .topnav .linkitem:hover span {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 3px; }
 
 /* Style the links inside the navigation bar */
 #logo {
   background: url("images/Main Logo.svg") center/cover no-repeat border-box;
-  width: 100%;
+  width: 218px;
   background-size: 218px;
   height: 103px;
   margin-top: 13px;
@@ -514,7 +595,6 @@ div {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
   color: black; }
 
 /* Add a color to the active/current link */
@@ -536,7 +616,8 @@ div {
 
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
 @media screen and (max-width: 600px) {
-  .topnav a, .topnav-right {
+  .topnav a,
+  .topnav-right {
     float: none;
     display: block; }
   .topnav-centered a {
