@@ -196,11 +196,23 @@ body {
         margin-top: -77px;
         position: absolute;
         left: 36%;
+        z-index: 4;
       }
+
       div{
         li {
           height: 20px;
         }
+      }
+      .menu__overlay{
+        width: 74%;
+        height: 103vh;
+        position: absolute;
+        background-size: 100%;
+        top: -15px;
+        z-index: 3;
+        transition: all .5s ease-in-out;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 100%, transparent);
       }
       .menu__image{
         width: 74%;
@@ -669,7 +681,7 @@ body{
   nav{
     .menu__box{
       width: 400px;
-      .menu__image, .menu__logo{
+      .menu__image, .menu__logo, .menu__overlay{
         display: none;
       }
     }
@@ -820,11 +832,6 @@ body{
   &.schedule {
     border: 1px solid #fff;
   }
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: black;
 }
 
 /* Add a color to the active/current link */
