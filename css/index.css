@@ -40,10 +40,10 @@ a {
   color: #000; }
 
 hr {
-  width: 69%;
-  margin: 0 50px 50px AUTO;
+  width: 170px;
+  margin: 0 50px 51px auto;
   margin-top: 107px 0;
-  padding-top: 46px;
+  padding-top: 10px;
   border-top: none;
   border-right: none;
   border-left: none; }
@@ -407,7 +407,7 @@ body {
   align-items: center;
   font-size: 14px; }
   .legal__links div {
-    padding: 0 3px; }
+    padding: 0 12px; }
 
 @media screen and (min-width: 24.375em) {
   .legal .legal__links {
@@ -555,6 +555,8 @@ div {
   top: 9%; }
 
 @media screen and (max-width: 1150px) {
+  body .number {
+    display: none; }
   body nav .menu__box {
     width: 400px; }
     body nav .menu__box .menu__image,
@@ -627,12 +629,12 @@ div {
     -moz-transition: color 0.5s ease-in-out;
     -ms-transition: color 0.5s ease-in-out;
     -o-transition: color 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out; }
+    transition: color 0.5s ease-in-out;
+    font-family: 'Asul'; }
     .topnav .linkitem:hover span {
       border-bottom: 1px solid #fff;
       padding-bottom: 3px; }
 
-/* Style the links inside the navigation bar */
 #logo {
   background: url("images/Main Logo.svg") center/cover no-repeat border-box;
   width: 218px;
@@ -655,12 +657,10 @@ div {
   .topnav a.schedule {
     border: 1px solid #fff; }
 
-/* Add a color to the active/current link */
 .topnav a.active {
   background-color: transparent;
   color: white; }
 
-/* Centered section inside the top navigation */
 .topnav-centered a {
   float: none;
   position: absolute;
@@ -668,11 +668,9 @@ div {
   left: 50%;
   transform: translate(-50%, -50%); }
 
-/* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right; }
 
-/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
 @media screen and (max-width: 600px) {
   .topnav a,
   .topnav-right {
