@@ -11,6 +11,9 @@ $green: #8ca48c;
   font-family: "Tilting Gothic";
   src: url("/css/fonts/Titling\ Gothic\ FB\ Extended\ Regular.otf");
 }
+html{
+scroll-behavior: smooth;
+}
 html,
 body {
   height: 100%;
