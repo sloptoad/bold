@@ -144,7 +144,7 @@ body {
       visibility: hidden;
       top: 0;
       right: -100%;
-      width: 400px;
+      width: 100%;
       height: 100%;
       margin: 0;
       padding: 80px 0;
@@ -152,8 +152,39 @@ body {
       background-color: #8ca48c;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
       transition-duration: 0.55s; }
-      body nav .menu__box li {
+      body nav .menu__box .menu__logo {
+        background: url("images/Main Logo.svg") center/cover no-repeat border-box;
+        width: 218px;
+        background-size: 218px;
+        height: 103px;
+        margin-top: -77px;
+        position: absolute;
+        left: 36%; }
+      body nav .menu__box div li {
         height: 20px; }
+      body nav .menu__box .menu__image {
+        width: 74%;
+        height: 103vh;
+        position: absolute;
+        background-size: 100%;
+        top: -15px;
+        transition: all .5s ease-in-out;
+        background: url("images/Amenities Menu.jpg") center/cover no-repeat border-box; }
+        body nav .menu__box .menu__image.after {
+          content: '\A';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.6);
+          opacity: 0;
+          transition: all 1s;
+          -webkit-transition: all 1s; }
+        body nav .menu__box .menu__image.a-img {
+          background: url("images/Amenities Menu.jpg") center/cover no-repeat border-box; }
+        body nav .menu__box .menu__image.r-img {
+          background: url("images/Residences Menu.jpg") center/cover no-repeat border-box; }
     body nav .menu__item {
       display: block;
       text-align: right;
@@ -188,7 +219,7 @@ body {
     body section.classic {
       min-height: 650px; }
     body section.hero {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 99%, transparent), url("images/Hero.jpg") center/cover no-repeat border-box;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 100%, transparent), url("images/Hero.jpg") center/cover no-repeat border-box;
       height: 1200px; }
     body section.amenities {
       background: url("images/Amenities.jpg") center/cover no-repeat border-box;
@@ -499,6 +530,12 @@ div {
 
 .herald .waviy-body:nth-child(5) {
   top: 9%; }
+
+@media screen and (max-width: 1150px) {
+  body nav .menu__box {
+    width: 400px; }
+    body nav .menu__box .menu__image, body nav .menu__box .menu__logo {
+      display: none; } }
 
 @media screen and (max-width: 1024px) {
   body section.playground {

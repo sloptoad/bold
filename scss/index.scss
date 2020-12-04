@@ -173,7 +173,7 @@ body {
       top: 0;
       right: -100%;
 
-      width: 400px;
+      width: 100%;
       height: 100%;
 
       margin: 0;
@@ -185,8 +185,44 @@ body {
       box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
 
       transition-duration: 0.55s;
-      li {
-        height: 20px;
+      .menu__logo{
+        background: url("images/Main Logo.svg") center/cover no-repeat border-box;
+        width: 218px;
+        background-size: 218px;
+        height: 103px;
+        margin-top: -77px;
+        position: absolute;
+        left: 36%;
+      }
+      div{
+        li {
+          height: 20px;
+        }
+      }
+      .menu__image{
+        width: 74%;
+        height: 103vh;
+        position: absolute;
+        background-size: 100%;
+        top: -15px;
+        transition: all .5s ease-in-out;
+        background:url("images/Amenities Menu.jpg") center/cover no-repeat border-box;
+        &.after{
+          content: '\A';
+          position: absolute;
+          width: 100%; height:100%;
+          top:0; left:0;
+          background:rgba(0,0,0,0.6);
+          opacity: 0;
+          transition: all 1s;
+          -webkit-transition: all 1s;
+        }
+        &.a-img{
+          background: url("images/Amenities Menu.jpg") center/cover no-repeat border-box;
+        }
+        &.r-img{
+          background: url("images/Residences Menu.jpg") center/cover no-repeat border-box;
+        }
       }
     }
 
@@ -235,7 +271,7 @@ body {
       min-height: 650px;
     }
     &.hero {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 99%, transparent),
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 100%, transparent),
         url("images/Hero.jpg") center/cover no-repeat border-box;
       height: 1200px;
     }
@@ -624,6 +660,18 @@ div {
   .waviy-body:nth-child(5) {
     top: 9%;
   }
+}
+@media screen and(max-width: 1150px) {
+body{
+  nav{
+    .menu__box{
+      width: 400px;
+      .menu__image, .menu__logo{
+        display: none;
+      }
+    }
+  }
+}
 }
 
 @media screen and(max-width: 1024px) {
