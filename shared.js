@@ -53,15 +53,14 @@ $(document).scroll(function () {
         $('.menu__btn').css('background-color', "transparent").css('opacity', '1');
     }
 
-    $("#r-img").on('click', function () {
+    $("#r-img").hover( function () {
         $('.menu__image').addClass('r-img');
         $('.menu__image').removeClass('i-img');
 
     })
-    $("#a-img").on('click', function () {
+    $("#a-img").hover(function () {
         $('.menu__image').addClass('a-img');
         $('.menu__image').removeClass('r-img');
     })
-
 });
 
