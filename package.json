@@ -1,0 +1,14 @@
+{
+    "name": "bold",
+    "version": "0.92.12",
+    "description": "The Metaverse virtual reality. The final outcome of all virtual worlds, augmented reality, and the Internet.",
+    "main": "index.js",
+    "license": "none",
+    "dependencies": {
+        "node-sass": "^5.0.0",
+        "sass": "^1.29.0"
+    },
+    "scripts": {
+        "scss": "node-sass --watch scss -o css"
+    }
+}
